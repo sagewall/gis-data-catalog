@@ -1,6 +1,4 @@
 <p>
   catalog works!
 </p>
-<div *ngFor="let dataset of datasets">
-  <p>{{dataset.about}}</p>
-</div>
+<app-dataset *ngFor="let dataset of datasets" [dataset]="dataset"></app-dataset>

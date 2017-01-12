@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { CatalogComponent } from './catalog/catalog.component';
 import { CatalogService } from './catalog.service';
+import { DatasetComponent } from './dataset/dataset.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CatalogComponent
+    CatalogComponent,
+    DatasetComponent
   ],
   imports: [
     BrowserModule,
