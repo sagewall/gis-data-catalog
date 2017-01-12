@@ -1,0 +1,17 @@
+{
+  "datasets": [
+    {
+      "id": 1,
+      "name": "Parcels",
+      "date": "2016-01-01T00:00:00",
+      "about": "Parcel feature class",
+      "image": "../assets/images/parcels.png"
+    }, {
+      "id": 2,
+      "name": "Zoning",
+      "date": "2016-01-01T00:00:00",
+      "about": "Zoning feature class",
+      "image": "../assets/images/parcels.png"
+    }
+  ]
+}
