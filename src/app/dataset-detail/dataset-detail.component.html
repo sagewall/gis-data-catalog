@@ -8,5 +8,7 @@
     <li>{{dataset.date}}</li>
     <li>{{dataset.about}}</li>
   </ul>
+  <button class="btn btn-primary" (click)="download()">Download</button>
+  <button class="btn btn-secondary" (click)="preview()">Preview</button>
 </div>
 <p><a [routerLink]="['/catalog']">Back to catalog.</a></p>

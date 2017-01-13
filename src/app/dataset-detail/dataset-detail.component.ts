@@ -24,4 +24,12 @@ export class DatasetDetailComponent implements OnInit {
       .switchMap((params: Params) => this.catalogService.getDataset(+params['id']))
       .subscribe(dataset => this.dataset = dataset);
   }
+
+  download() {
+    console.log('clicked download button', this.dataset.downloadUrl);
+  }
+
+  preview() {
+    console.log('clicked preview button', this.dataset.previewUrl);
+  }
 }
