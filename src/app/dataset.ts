@@ -3,5 +3,7 @@ export class Dataset {
   name: string;
   date: Date;
   about: string;
-  image: string;
+  thumbnailUrl: string;
+  downloadUrl: string;
+  previewUrl: string;
 }

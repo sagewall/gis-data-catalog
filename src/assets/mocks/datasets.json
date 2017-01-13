@@ -5,13 +5,17 @@
       "name": "Parcels",
       "date": "2016-01-01T00:00:00",
       "about": "Parcel feature class",
-      "image": "../assets/images/parcels.png"
+      "thumbnailUrl": "../assets/images/parcels.png",
+      "downloadUrl": "//www.denvergov.org/media/gis/DataCatalog/parcels/shape/parcels.zip",
+      "previewUrl": "//maps.jeffco.us/arcgis/rest/services/jMap/Parcel/MapServer?f=jsapi"
     }, {
       "id": 2,
       "name": "Zoning",
       "date": "2016-01-01T00:00:00",
       "about": "Zoning feature class",
-      "image": "../assets/images/parcels.png"
+      "image": "../assets/images/parcels.png",
+      "downloadUrl": "//www.denvergov.org/media/gis/DataCatalog/parcels/shape/parcels.zip",
+      "previewUrl": "//maps.jeffco.us/arcgis/rest/services/jMap/Zoning/MapServer?f=jsapi"
     }
   ]
 }
