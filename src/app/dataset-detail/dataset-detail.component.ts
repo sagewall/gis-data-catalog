@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Params} from '@angular/router';
+import { CatalogService } from '../catalog.service';
+import { Dataset } from '../dataset';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-dataset-detail',
@@ -8,13 +11,17 @@ import {ActivatedRoute, Params} from '@angular/router';
 })
 export class DatasetDetailComponent implements OnInit {
 
-  public id;
+  dataset: Dataset;
 
-  constructor( private route: ActivatedRoute) { }
+  constructor(
+    private route: ActivatedRoute,
+    private catalogService: CatalogService
+  ) { }
+
 
   ngOnInit() {
-    this.route.params.forEach(
-      (params: Params) => this.id = params['id']
-    );
+    this.route.params
+      .switchMap((params: Params) => this.catalogService.getDataset(+params['id']))
+      .subscribe(dataset => this.dataset = dataset);
   }
 }

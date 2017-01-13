@@ -14,8 +14,9 @@ export class CatalogComponent implements OnInit {
   constructor(private catalogService: CatalogService) { }
 
   ngOnInit() {
-    this.catalogService.getDatasets()
-      .subscribe(data => this.datasets = data);
+    this.catalogService
+      .getDatasets()
+      .then(data => this.datasets = data);
   }
 
 }

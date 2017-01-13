@@ -1,4 +1,12 @@
 <p>
-  dataset-detail works! {{ id }}
+  dataset-detail works!
 </p>
+<div *ngIf="dataset">
+  <h4>{{dataset.name}}</h4>
+  <img src="{{dataset.image}}"/>
+  <ul>
+    <li>{{dataset.date}}</li>
+    <li>{{dataset.about}}</li>
+  </ul>
+</div>
 <p><a [routerLink]="['/catalog']">Back to catalog.</a></p>
