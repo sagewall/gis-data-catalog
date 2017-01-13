@@ -2,24 +2,22 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { CatalogModule } from './catalog/catalog.module';
 import { AppComponent } from './app.component';
-import { CatalogComponent } from './catalog/catalog.component';
-import { CatalogService } from './catalog.service';
-import { DatasetComponent } from './dataset/dataset.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    CatalogComponent,
-    DatasetComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingModule,
+    CatalogModule
   ],
-  providers: [CatalogService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
