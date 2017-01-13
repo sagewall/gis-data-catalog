@@ -1,14 +1,15 @@
-<p>
-  dataset-detail works!
-</p>
-<div *ngIf="dataset">
-  <h4>{{dataset.name}}</h4>
-  <img src="{{dataset.thumbnailUrl}}"/>
-  <ul>
-    <li>{{dataset.date}}</li>
-    <li>{{dataset.about}}</li>
-  </ul>
-  <button class="btn btn-primary" (click)="download()">Download</button>
-  <button class="btn btn-secondary" (click)="preview()">Preview</button>
+<div class="card" *ngIf="dataset">
+  <div class="card-block">
+    <img src="{{dataset.thumbnailUrl}}" alt="Parcel thumbnail"/>
+    <h4 class="card-title">{{dataset.name}}</h4>
+    <p class="card-text">{{dataset.about}}</p>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Last Update: {{dataset.date}}</li>
+    </ul>
+    <div class="card-block">
+      <button class="btn btn-primary" (click)="download()">Download</button>
+      <button class="btn btn-secondary" (click)="preview()">Preview</button>
+      <p><a class="card-link" [routerLink]="['/catalog']">Back to catalog</a></p>
+    </div>
+  </div>
 </div>
-<p><a [routerLink]="['/catalog']">Back to catalog.</a></p>

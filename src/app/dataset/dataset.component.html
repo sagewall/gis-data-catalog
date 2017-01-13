@@ -1,2 +1,11 @@
-<h3><a [routerLink]="['/catalog', dataset.id]">{{dataset.name}}</a></h3>
-<p>{{dataset.about}}</p>
+<div class="card">
+  <div class="card-block">
+    <h3 class="card-title">{{dataset.name}}</h3>
+    <p>{{dataset.about}}</p>
+    <a class="btn btn-primary btn-sm" [routerLink]="['/catalog', dataset.id]">Details</a>
+  </div>
+
+</div>
+
+
+

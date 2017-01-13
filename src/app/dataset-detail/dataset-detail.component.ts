@@ -26,10 +26,10 @@ export class DatasetDetailComponent implements OnInit {
   }
 
   download() {
-    console.log('clicked download button', this.dataset.downloadUrl);
+    window.open(this.dataset.downloadUrl);
   }
 
   preview() {
-    console.log('clicked preview button', this.dataset.previewUrl);
+    window.open(this.dataset.previewUrl);
   }
 }
