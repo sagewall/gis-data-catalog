@@ -1,8 +1,8 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { RouterModule, ActivatedRoute, Data } from '@angular/router';
+import { CatalogService } from '../catalog.service';
+import { HttpModule } from '@angular/http';
 import { DatasetDetailComponent } from './dataset-detail.component';
 
 describe('DatasetDetailComponent', () => {
@@ -11,15 +11,30 @@ describe('DatasetDetailComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DatasetDetailComponent ]
+      imports: [
+        RouterModule,
+        HttpModule,
+      ],
+      declarations: [DatasetDetailComponent],
+      providers: [
+        CatalogService,
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            data: {
+              subscribe: (fn: (value: Data) => void) => fn({
+                id: '1'
+              })
+            }
+          }
+        }]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DatasetDetailComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {

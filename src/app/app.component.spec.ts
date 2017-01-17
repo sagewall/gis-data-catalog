@@ -3,11 +3,27 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { AppRoutingModule } from './app-routing/app-routing.module';
+import { RouterTestingModule } from '@angular/router/testing';
+import { CatalogModule } from './catalog/catalog.module';
+
+
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent
+      ],
+      imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        AppRoutingModule,
+        CatalogModule,
+        RouterTestingModule
       ],
     });
     TestBed.compileComponents();

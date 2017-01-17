@@ -1,9 +1,10 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
-
+import { RouterTestingModule } from '@angular/router/testing';
+import { CatalogComponent } from '../catalog/catalog.component';
+import { CatalogService } from '../catalog.service';
 import { DatasetComponent } from './dataset.component';
+import { HttpModule } from '@angular/http';
 
 describe('DatasetComponent', () => {
   let component: DatasetComponent;
@@ -11,15 +12,18 @@ describe('DatasetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DatasetComponent ]
+      imports: [ RouterTestingModule, HttpModule ],
+      declarations: [ DatasetComponent ],
+      providers: [
+        CatalogService,
+        CatalogComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DatasetComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
