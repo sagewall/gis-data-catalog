@@ -9,13 +9,15 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CatalogModule } from './catalog/catalog.module';
+import { HelpComponent } from './help/help.component';
 
 
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [
-        AppComponent
+        AppComponent,
+        HelpComponent
       ],
       imports: [
         BrowserModule,
@@ -45,6 +47,6 @@ describe('AppComponent', () => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('GIS Data Catalog');
+    expect(compiled.querySelector('.navbar-brand').textContent).toContain('GIS Data Catalog');
   }));
 });

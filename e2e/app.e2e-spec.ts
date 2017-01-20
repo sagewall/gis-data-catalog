@@ -7,7 +7,7 @@ describe('gis-data-catalog App', function() {
     page = new GisDataCatalogPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display narbar-brand GIS Data Catalog', () => {
     page.navigateTo();
     expect(page.getParagraphText()).toEqual('GIS Data Catalog');
   });

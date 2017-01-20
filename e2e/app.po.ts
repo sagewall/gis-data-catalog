@@ -6,6 +6,6 @@ export class GisDataCatalogPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('app-root .navbar-brand')).getText();
   }
 }
