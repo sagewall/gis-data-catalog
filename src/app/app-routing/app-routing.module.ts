@@ -8,7 +8,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/catalog', pathMatch: 'full'},
   {path: 'help', component: HelpComponent},
   {path: 'catalog', component: CatalogComponent},
-  {path: 'catalog/:id', component: DatasetDetailComponent}
+  {path: 'catalog/datasets/:id', component: DatasetDetailComponent}
 ];
 
 @NgModule({

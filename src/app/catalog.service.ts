@@ -6,20 +6,23 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class CatalogService {
 
-  private catalogUrl = '../assets/mocks/datasets.json';
+  private catalogUrl = 'catalog/datasets';
 
   constructor(private http: Http) { }
 
   getDatasets(): Promise<Dataset[]> {
     return this.http.get(this.catalogUrl)
       .toPromise()
-      .then(response => <Dataset[]>response.json().datasets)
+      .then(response => response.json().data as Dataset[])
       .catch(this.handleError);
   }
 
   getDataset(id: number): Promise<Dataset> {
-    return this.getDatasets()
-      .then(datasets => datasets.find(dataset => dataset.id === id));
+    const url = `${this.catalogUrl}/${id}`;
+    return this.http.get(url)
+      .toPromise()
+      .then(response => response.json().data as Dataset)
+      .catch(this.handleError);
   }
 
   private handleError(error: any): Promise<any> {
