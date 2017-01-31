@@ -12,7 +12,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'voluptate volt esse cesium dolore eu futile nulla parameter. Execute primus sint occaecat cupidatat non ' +
         'proident, sunt in culpa qui technia deserunt mondus anim id est proceus.',
 
-        'thumbnailUrl': '../assets/images/parcels.png',
+        'thumbnailUrl': 'assets/images/parcels.png',
         'downloadUrl': '//www.denvergov.org/media/gis/DataCatalog/parcels/shape/parcels.zip',
         'previewUrl': '//maps.jeffco.us/arcgis/rest/services/jMap/Parcel/MapServer?f=jsapi'
       }, {
@@ -25,7 +25,7 @@ export class InMemoryDataService implements InMemoryDbService {
         'voluptate volt esse cesium dolore eu futile nulla parameter. Execute primus sint occaecat cupidatat non ' +
         'proident, sunt in culpa qui technia deserunt mondus anim id est proceus.',
 
-        'thumbnailUrl': '../assets/images/parcels.png',
+        'thumbnailUrl': 'assets/images/parcels.png',
         'downloadUrl': '//www.denvergov.org/media/gis/DataCatalog/zoning/shape/zoning.zip',
         'previewUrl': '//maps.jeffco.us/arcgis/rest/services/jMap/Zoning/MapServer?f=jsapi'
       }
