@@ -5,5 +5,5 @@ export class Dataset {
   about: string;
   thumbnailUrl: string;
   downloadUrl: string;
-  previewUrl: string;
+  tileLayer: string;
 }

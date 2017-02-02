@@ -14,7 +14,8 @@ export class InMemoryDataService implements InMemoryDbService {
 
         'thumbnailUrl': 'assets/images/parcels.png',
         'downloadUrl': '//www.denvergov.org/media/gis/DataCatalog/parcels/shape/parcels.zip',
-        'previewUrl': '//maps.jeffco.us/arcgis/rest/services/jMap/Parcel/MapServer?f=jsapi'
+        'tileLayer': 'https://api.mapbox.com/styles/v1/sagewall/ciphm32fr000ybjm5rhsz8hmx/tiles/256/{z}/{x}/{y}?' +
+        'access_token=pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog'
       }, {
         'id': 2,
         'name': 'Zoning',
@@ -27,7 +28,8 @@ export class InMemoryDataService implements InMemoryDbService {
 
         'thumbnailUrl': 'assets/images/parcels.png',
         'downloadUrl': '//www.denvergov.org/media/gis/DataCatalog/zoning/shape/zoning.zip',
-        'previewUrl': '//maps.jeffco.us/arcgis/rest/services/jMap/Zoning/MapServer?f=jsapi'
+        'tileLayer': 'https://api.mapbox.com/styles/v1/sagewall/ciphm32fr000ybjm5rhsz8hmx/tiles/256/{z}/{x}/{y}?' +
+        'access_token=pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog'
       }
     ];
     return {datasets};
