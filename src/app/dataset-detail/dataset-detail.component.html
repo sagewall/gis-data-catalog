@@ -1,17 +1,14 @@
 <div class="card" *ngIf="dataset">
   <div class="card-block">
-    <img src="{{dataset.thumbnailUrl}}" alt="Parcel thumbnail"/>
     <h4 class="card-title">{{dataset.name}}</h4>
     <p class="card-text">{{dataset.about}}</p>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Last Update: {{dataset.date}}</li>
     </ul>
-    <div class="card-block">
-      <button class="btn btn-primary" (click)="download()">Download</button>
-      <p><a class="card-link" [routerLink]="['/catalog']">Back to catalog</a></p>
-    </div>
-    <div class="card-block">
-      <app-leaflet-map [dataset]="dataset"></app-leaflet-map>
-    </div>
+    <app-leaflet-map [dataset]="dataset"></app-leaflet-map>
+  </div>
+  <div class="card-footer">
+    <button class="btn btn-primary" (click)="download()">Download</button>
+    <p><a class="card-link" [routerLink]="['/catalog']">Back to catalog</a></p>
   </div>
 </div>
