@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { CatalogService } from '../catalog.service';
 import { Dataset } from '../dataset';
-import * as L from 'leaflet';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -30,11 +29,4 @@ export class DatasetDetailComponent implements OnInit {
     window.open(this.dataset.downloadUrl);
   }
 
-  preview() {
-    const leafletMap = L.map('leaflet-map')
-      .setView([39.728, -105.202], 13);
-
-    L.tileLayer(this.dataset.tileLayer)
-      .addTo(leafletMap);
-  }
 }

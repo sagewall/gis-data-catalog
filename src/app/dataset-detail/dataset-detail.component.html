@@ -8,11 +8,10 @@
     </ul>
     <div class="card-block">
       <button class="btn btn-primary" (click)="download()">Download</button>
-      <button class="btn btn-secondary" (click)="preview()">Preview</button>
       <p><a class="card-link" [routerLink]="['/catalog']">Back to catalog</a></p>
     </div>
     <div class="card-block">
-      <div id="leaflet-map"></div>
+      <app-leaflet-map [dataset]="dataset"></app-leaflet-map>
     </div>
   </div>
 </div>

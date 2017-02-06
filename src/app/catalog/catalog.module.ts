@@ -8,6 +8,7 @@ import { DatasetComponent } from '../dataset/dataset.component';
 import { DatasetDetailComponent } from '../dataset-detail/dataset-detail.component';
 import { CatalogService } from '../catalog.service';
 import { CatalogSearchComponent } from '../catalog-search/catalog-search.component';
+import { LeafletMapComponent } from '../leaflet-map/leaflet-map.component';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import { CatalogSearchComponent } from '../catalog-search/catalog-search.compone
     CatalogComponent,
     DatasetComponent,
     DatasetDetailComponent,
-    CatalogSearchComponent
+    CatalogSearchComponent,
+    LeafletMapComponent
   ],
   providers: [CatalogService]
 })
