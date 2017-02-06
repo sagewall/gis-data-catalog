@@ -4,7 +4,7 @@ export class InMemoryDataService implements InMemoryDbService {
     let datasets = [
       {
         'id': 1,
-        'name': 'Parcels',
+        'name': 'Address',
         'date': '1/1/2017',
         'about': 'Robot ipsum datus scan amet, constructor ad ut splicing elit, sed do errus mod tempor in conduit ut ' +
         'laboratory et deplore electromagna aliqua. Ut enim ad minimum veniam, quis no indestruct exoform ullamco ' +
@@ -12,13 +12,14 @@ export class InMemoryDataService implements InMemoryDbService {
         'voluptate volt esse cesium dolore eu futile nulla parameter. Execute primus sint occaecat cupidatat non ' +
         'proident, sunt in culpa qui technia deserunt mondus anim id est proceus.',
 
-        'thumbnailUrl': 'assets/images/parcels.png',
-        'downloadUrl': '//www.denvergov.org/media/gis/DataCatalog/parcels/shape/parcels.zip',
-        'tileLayer': 'https://api.mapbox.com/styles/v1/sagewall/ciphm32fr000ybjm5rhsz8hmx/tiles/256/{z}/{x}/{y}?' +
-        'access_token=pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog'
+        'downloadUrl': 'https://www.denvergov.org/media/gis/DataCatalog/addresses/shape/addresses.zip',
+        'dynamicMapLayer': '//mapservices2.jeffco.us/arcgis/rest/services/jMap/Address/MapServer',
+        'lat': 39.728,
+        'lon': -105.202,
+        'zoom': 16
       }, {
         'id': 2,
-        'name': 'Zoning',
+        'name': 'Street',
         'date': '1/1/2017',
         'about': 'Robot ipsum datus scan amet, constructor ad ut splicing elit, sed do errus mod tempor in conduit ut ' +
         'laboratory et deplore electromagna aliqua. Ut enim ad minimum veniam, quis no indestruct exoform ullamco ' +
@@ -26,10 +27,11 @@ export class InMemoryDataService implements InMemoryDbService {
         'voluptate volt esse cesium dolore eu futile nulla parameter. Execute primus sint occaecat cupidatat non ' +
         'proident, sunt in culpa qui technia deserunt mondus anim id est proceus.',
 
-        'thumbnailUrl': 'assets/images/parcels.png',
-        'downloadUrl': '//www.denvergov.org/media/gis/DataCatalog/zoning/shape/zoning.zip',
-        'tileLayer': 'https://api.mapbox.com/styles/v1/sagewall/ciphm32fr000ybjm5rhsz8hmx/tiles/256/{z}/{x}/{y}?' +
-        'access_token=pk.eyJ1Ijoic2FnZXdhbGwiLCJhIjoiMjRhNDExZWMwY2M1NzFlOTYxZWJjNjRiZTBhZGQ2NDEifQ.85AyZco3_blL_yZ0dv3Bog'
+        'downloadUrl': 'https://www.denvergov.org/media/gis/DataCatalog/street_centerline/shape/street_centerline.zip',
+        'dynamicMapLayer': '//mapservices1.jeffco.us/arcgis/rest/services/jMap/Street/MapServer',
+        'lat': 39.728,
+        'lon': -105.202,
+        'zoom': 13
       }
     ];
     return {datasets};

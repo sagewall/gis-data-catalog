@@ -4,5 +4,8 @@ export class Dataset {
   date: Date;
   about: string;
   downloadUrl: string;
-  tileLayer: string;
+  dynamicMapLayer: string;
+  lat: number;
+  lon: number;
+  zoom: number;
 }
