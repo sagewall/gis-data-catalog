@@ -43,7 +43,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('GIS Data Catalog');
   }));
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render title in .navbar-grand', async(() => {
     let fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     let compiled = fixture.debugElement.nativeElement;
