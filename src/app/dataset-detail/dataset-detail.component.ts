@@ -18,10 +18,9 @@ export class DatasetDetailComponent implements OnInit {
     private catalogService: CatalogService
   ) { }
 
-
   ngOnInit() {
     this.route.params
-      .switchMap((params: Params) => this.catalogService.getDataset(+params['id']))
+      .switchMap((params: Params) => this.catalogService.getDataset(params['id']))
       .subscribe(dataset => this.dataset = dataset);
   }
 

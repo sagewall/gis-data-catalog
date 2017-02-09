@@ -44,7 +44,7 @@ export class CatalogSearchComponent implements OnInit {
   }
 
   gotoDetail(dataset: Dataset): void {
-    let link = ['/catalog/datasets', dataset.id];
+    let link = ['/catalog/datasets', dataset._id];
     this.router.navigate(link);
   }
 

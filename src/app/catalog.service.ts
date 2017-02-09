@@ -1,33 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
-import { Dataset } from './dataset';
-import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CatalogService {
 
-  private catalogUrl = 'catalog/datasets';
+  private catalogUrl = '//localhost:3000/api/datasets';
 
   constructor(private http: Http) { }
 
-  getDatasets(): Promise<Dataset[]> {
+  getDatasets(){
     return this.http.get(this.catalogUrl)
-      .toPromise()
-      .then(response => response.json().data as Dataset[])
-      .catch(this.handleError);
+      .map(res => res.json());
   }
 
-  getDataset(id: number): Promise<Dataset> {
+  getDataset(id: string){
     const url = `${this.catalogUrl}/${id}`;
     return this.http.get(url)
-      .toPromise()
-      .then(response => response.json().data as Dataset)
-      .catch(this.handleError);
-  }
-
-  private handleError(error: any): Promise<any> {
-    console.error('An error occured', error);
-    return Promise.reject(error.message || error);
+      .map(res => res.json());
   }
 
 }

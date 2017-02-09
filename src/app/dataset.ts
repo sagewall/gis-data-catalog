@@ -1,5 +1,5 @@
 export class Dataset {
-  id: number;
+  _id: string;
   name: string;
   date: Date;
   about: string;

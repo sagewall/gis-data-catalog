@@ -16,7 +16,7 @@ export class CatalogComponent implements OnInit {
   ngOnInit() {
     this.catalogService
       .getDatasets()
-      .then(data => this.datasets = data);
+      .subscribe(datasets => this.datasets = datasets);
   }
 
 }
