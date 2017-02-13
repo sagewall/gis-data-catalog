@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class CatalogService {
 
-  private catalogUrl = '//localhost:3000/api/datasets';
+  private catalogUrl = 'https://localhost:3443/api/datasets';
 
   constructor(private http: Http) { }
 

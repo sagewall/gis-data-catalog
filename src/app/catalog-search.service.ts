@@ -11,7 +11,7 @@ export class CatalogSearchService {
 
   search(term: string): Observable<Dataset[]> {
     return this.http
-      .get(`//localhost:3000/api/search/${term}`)
+      .get(`https://localhost:3443/api/search/${term}`)
       .map(response => response.json() as Dataset[]);
   }
 
