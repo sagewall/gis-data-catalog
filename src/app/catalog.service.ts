@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Dataset } from './dataset';
 import { Observable } from 'rxjs/observable';
+import { environment } from '../environments/environment';
 import 'rxjs/add/operator/map';
 
 @Injectable()
 export class CatalogService {
 
-  private catalogUrl = 'https://localhost:3443/api/datasets';
+  private catalogUrl = `${environment.apiUrl}/datasets`;
 
   constructor(private http: Http) { }
 
