@@ -1,14 +1,14 @@
-import { GisDataCatalogPage } from './app.po';
+import { GisDataCatalogUpdatePage } from './app.po';
 
-describe('gis-data-catalog App', function() {
-  let page: GisDataCatalogPage;
+describe('gis-data-catalog-update App', () => {
+  let page: GisDataCatalogUpdatePage;
 
   beforeEach(() => {
-    page = new GisDataCatalogPage();
+    page = new GisDataCatalogUpdatePage();
   });
 
-  it('should display narbar-brand GIS Data Catalog', () => {
+  it('should display message saying app works', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('GIS Data Catalog');
+    expect(page.getParagraphText()).toEqual('app works!');
   });
 });
