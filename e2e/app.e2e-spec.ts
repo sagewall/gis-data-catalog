@@ -7,8 +7,8 @@ describe('gis-data-catalog App', () => {
     page = new TempPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display GIS Data Catalog in navbar', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getNavbarBrandText()).toEqual('GIS Data Catalog');
   });
 });

@@ -5,7 +5,7 @@ export class TempPage {
     return browser.get('/');
   }
 
-  getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+  getNavbarBrandText() {
+    return element(by.css('a.navbar-brand')).getText();
   }
 }
