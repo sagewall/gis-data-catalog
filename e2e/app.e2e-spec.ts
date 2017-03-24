@@ -1,10 +1,10 @@
-import { GisDataCatalogUpdatePage } from './app.po';
+import { TempPage } from './app.po';
 
-describe('gis-data-catalog-update App', () => {
-  let page: GisDataCatalogUpdatePage;
+describe('gis-data-catalog App', () => {
+  let page: TempPage;
 
   beforeEach(() => {
-    page = new GisDataCatalogUpdatePage();
+    page = new TempPage();
   });
 
   it('should display message saying app works', () => {
