@@ -3,6 +3,7 @@ export class Dataset {
   name: string;
   date: Date;
   about: string;
+  tags: [string];
   downloadUrl: string;
   dynamicMapLayer: string;
   lat: number;

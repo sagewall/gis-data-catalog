@@ -3,6 +3,9 @@
     <h4 class="card-title">{{dataset.name}}</h4>
     <p class="card-text">{{dataset.about}}</p>
     <ul class="list-group list-group-flush">
+      <li class="list-group-item">
+        <span class="badge badge-default" *ngFor="let tag of dataset.tags">{{ tag }}</span>
+      </li>
       <li class="list-group-item">Last Update: {{dataset.date}}</li>
     </ul>
     <app-leaflet-map [dataset]="dataset"></app-leaflet-map>
