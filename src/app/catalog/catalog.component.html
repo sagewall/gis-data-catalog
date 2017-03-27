@@ -1,10 +1,9 @@
 <div class="row">
   <div class="col-md-3">
     <app-catalog-search></app-catalog-search>
+    <span class="badge badge-default" *ngFor="let tag of tags">{{ tag }}</span>
   </div>
   <div class="col-md-9">
     <app-dataset *ngFor="let dataset of datasets" [dataset]="dataset"></app-dataset>
   </div>
 </div>
-
-

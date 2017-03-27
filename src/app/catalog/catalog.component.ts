@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Dataset } from '../dataset';
 import { DatasetService } from '../dataset.service';
+import { TagService } from '../tag.service';
 
 @Component({
   selector: 'app-catalog',
@@ -10,13 +11,21 @@ import { DatasetService } from '../dataset.service';
 export class CatalogComponent implements OnInit {
 
   datasets: Dataset[];
+  tags: string[];
 
-  constructor(private datasetService: DatasetService) { }
+  constructor(
+    private datasetService: DatasetService,
+    private tagService: TagService
+  ) { }
 
   ngOnInit() {
     this.datasetService
       .getDatasets()
       .subscribe(datasets => this.datasets = datasets);
+
+    this.tagService
+      .getTags()
+      .subscribe(tags => this.tags = tags);
   }
 
 }

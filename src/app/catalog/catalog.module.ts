@@ -5,6 +5,7 @@ import { CatalogComponent } from './catalog.component';
 import { DatasetComponent } from '../dataset/dataset.component';
 import { DatasetDetailComponent } from '../dataset-detail/dataset-detail.component';
 import { DatasetService } from '../dataset.service';
+import { TagService } from '../tag.service';
 import { CatalogSearchComponent } from '../catalog-search/catalog-search.component';
 import { LeafletMapComponent } from '../leaflet-map/leaflet-map.component';
 
@@ -20,7 +21,10 @@ import { LeafletMapComponent } from '../leaflet-map/leaflet-map.component';
     CatalogSearchComponent,
     LeafletMapComponent
   ],
-  providers: [DatasetService]
+  providers: [
+    DatasetService,
+    TagService
+  ]
 })
 export class CatalogModule {
 }
