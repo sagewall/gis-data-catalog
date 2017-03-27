@@ -12,7 +12,7 @@ export class CatalogSearchService {
 
   search(term: string): Observable<Dataset[]> {
     return this.http
-      .get(`${environment.apiUrl}/search/${term}`)
+      .get(`${environment.apiUrl}/datasets/search/${term}`)
       .map(response => response.json() as Dataset[]);
   }
 
