@@ -6,7 +6,7 @@ import { environment } from '../environments/environment';
 import 'rxjs/add/operator/map';
 
 @Injectable()
-export class CatalogSearchService {
+export class DatasetSearchService {
 
   constructor(private http: Http) { }
 

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Subject } from 'rxjs/Subject';
-import { CatalogSearchService } from '../catalog-search.service';
+import { DatasetSearchService } from '../dataset-search.service';
 import { Dataset } from '../dataset';
 import 'rxjs/add/observable/of';
 import 'rxjs/add/operator/catch';
@@ -13,7 +13,7 @@ import 'rxjs/add/operator/distinctUntilChanged';
   selector: 'app-catalog-search',
   templateUrl: './catalog-search.component.html',
   styleUrls: ['./catalog-search.component.sass'],
-  providers: [CatalogSearchService]
+  providers: [DatasetSearchService]
 })
 export class CatalogSearchComponent implements OnInit {
 
@@ -21,7 +21,7 @@ export class CatalogSearchComponent implements OnInit {
   private searchTerms = new Subject<string>();
 
   constructor(
-    private catalogSearchService: CatalogSearchService,
+    private datasetSearchService: DatasetSearchService,
     private router: Router
   ) { }
 
@@ -34,7 +34,7 @@ export class CatalogSearchComponent implements OnInit {
       .debounceTime(300)
       .distinctUntilChanged()
       .switchMap(term => term
-        ? this.catalogSearchService.search(term)
+        ? this.datasetSearchService.search(term)
         : Observable.of<Dataset[]>([]))
       .catch(error => {
         console.log(error);

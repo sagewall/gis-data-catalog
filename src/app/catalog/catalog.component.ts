@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Dataset } from '../dataset';
-import { CatalogService } from '../catalog.service';
+import { DatasetService } from '../dataset.service';
 
 @Component({
   selector: 'app-catalog',
@@ -11,10 +11,10 @@ export class CatalogComponent implements OnInit {
 
   datasets: Dataset[];
 
-  constructor(private catalogService: CatalogService) { }
+  constructor(private datasetService: DatasetService) { }
 
   ngOnInit() {
-    this.catalogService
+    this.datasetService
       .getDatasets()
       .subscribe(datasets => this.datasets = datasets);
   }

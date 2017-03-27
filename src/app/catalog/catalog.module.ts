@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CatalogComponent } from './catalog.component';
 import { DatasetComponent } from '../dataset/dataset.component';
 import { DatasetDetailComponent } from '../dataset-detail/dataset-detail.component';
-import { CatalogService } from '../catalog.service';
+import { DatasetService } from '../dataset.service';
 import { CatalogSearchComponent } from '../catalog-search/catalog-search.component';
 import { LeafletMapComponent } from '../leaflet-map/leaflet-map.component';
 
@@ -20,7 +20,7 @@ import { LeafletMapComponent } from '../leaflet-map/leaflet-map.component';
     CatalogSearchComponent,
     LeafletMapComponent
   ],
-  providers: [CatalogService]
+  providers: [DatasetService]
 })
 export class CatalogModule {
 }
