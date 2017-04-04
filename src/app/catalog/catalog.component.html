@@ -1,7 +1,12 @@
 <div class="row">
   <div class="col-md-3">
     <app-catalog-search></app-catalog-search>
-    <span class="badge badge-default" *ngFor="let tag of tags">{{ tag }}</span>
+    <p>Click a tag to filter datasets</p>
+    <div class="btn-group-vertical" role="group">
+      <button type="button" class="button btn-secondary btn-sm"
+              [class.active]="tag === selectedTag"
+              *ngFor="let tag of tags" (click)="filterDatasets(tag)">{{ tag }}</button>
+    </div>
   </div>
   <div class="col-md-9">
     <app-dataset *ngFor="let dataset of datasets" [dataset]="dataset"></app-dataset>
