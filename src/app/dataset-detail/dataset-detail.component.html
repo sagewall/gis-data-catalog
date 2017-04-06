@@ -2,12 +2,8 @@
   <div class="card-block">
     <h4 class="card-title">{{dataset.name}}</h4>
     <p class="card-text">{{dataset.about}}</p>
-    <ul class="list-group list-group-flush">
-      <li class="list-group-item">
-        <span class="badge badge-default" *ngFor="let tag of dataset.tags">{{ tag }}</span>
-      </li>
-      <li class="list-group-item">Last Update: {{dataset.date}}</li>
-    </ul>
+    <p><span class="badge badge-pill badge-info" *ngFor="let tag of dataset.tags">{{ tag }}</span></p>
+    <p>Last Update: {{dataset.date | date}}</p>
     <app-leaflet-map [dataset]="dataset"></app-leaflet-map>
   </div>
   <div class="card-footer">

@@ -1,11 +1,16 @@
-<div>
-  <form class="form-group">
-    <input #searchBox (keyup)="search(searchBox.value)" class="form-control mr-sm-2" type="text" placeholder="Search">
-  </form>
-  <ul class="list-group">
-    <li *ngFor="let dataset of datasets | async"
-        (click)="gotoDetail(dataset)" class="list-group-item search-result" >
-      {{dataset.name}}
-    </li>
-  </ul>
+<div class="card search-card">
+  <div class="card-block">
+    <form>
+      <div class="form-group">
+        <input #searchBox (keyup)="search(searchBox.value)" class="form-control mr-sm-2" type="text"
+               placeholder="Search">
+      </div>
+    </form>
+    <ul class="list-group">
+      <li *ngFor="let dataset of datasets | async"
+          (click)="gotoDetail(dataset)" class="list-group-item search-result">
+        {{dataset.name}}
+      </li>
+    </ul>
+  </div>
 </div>

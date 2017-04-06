@@ -1,14 +1,18 @@
 <div class="row">
-  <div class="col-md-3">
+  <aside class="col-md-3">
     <app-catalog-search></app-catalog-search>
-    <p>Click a tag to filter datasets</p>
-    <div class="btn-group-vertical" role="group">
-      <button type="button" class="button btn-secondary btn-sm"
-              [class.active]="tag === selectedTag"
-              *ngFor="let tag of tags" (click)="filterDatasets(tag)">{{ tag }}</button>
+    <div class="card tags-card">
+      <div class="card-block">
+        <h5 class="card-title">Filter by tag</h5>
+        <ul class="list-group">
+          <li class="list-group-item tag" [class.active]="tag === selectedTag"
+              *ngFor="let tag of tags" (click)="filterDatasets(tag)">{{ tag }}
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div class="col-md-9">
+  </aside>
+  <div class="col-md-9 catalog">
     <app-dataset *ngFor="let dataset of datasets" [dataset]="dataset"></app-dataset>
   </div>
 </div>
