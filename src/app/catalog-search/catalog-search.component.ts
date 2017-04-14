@@ -36,8 +36,7 @@ export class CatalogSearchComponent implements OnInit {
       .switchMap(term => term
         ? this.datasetSearchService.search(term)
         : Observable.of<Dataset[]>([]))
-      .catch(error => {
-        console.log(error);
+      .catch( ()=> {
         return Observable.of<Dataset[]>([]);
         }
       );
