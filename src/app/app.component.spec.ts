@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CatalogModule } from './catalog/catalog.module';
 import { HelpComponent } from './help/help.component';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
 describe('AppComponent', () => {
@@ -17,7 +18,8 @@ describe('AppComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        HelpComponent
+        HelpComponent,
+        PageNotFoundComponent
       ],
       imports: [
         BrowserModule,

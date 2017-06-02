@@ -1,14 +1,16 @@
-import { TempPage } from './app.po';
+import { GisDataCatalogPage } from './app.po';
 
 describe('gis-data-catalog App', () => {
-  let page: TempPage;
+  let page: GisDataCatalogPage;
 
   beforeEach(() => {
-    page = new TempPage();
+    page = new GisDataCatalogPage();
   });
 
-  it('should display GIS Data Catalog in navbar', () => {
+  it('should display GIS Data Catalog in navbar', done => {
     page.navigateTo();
-    expect(page.getNavbarBrandText()).toEqual('GIS Data Catalog');
+    page.getNavbarBrandText()
+      .then(msg => expect(msg).toEqual('GIS Data Catalog'))
+      .then(done, done.fail);
   });
 });
