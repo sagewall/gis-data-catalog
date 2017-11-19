@@ -1,5 +1,3 @@
-/* tslint:disable:no-unused-variable */
-
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 
@@ -45,7 +43,7 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('GIS Data Catalog');
   }));
 
-  it('should render title in .navbar-grand', async(() => {
+  it('should render title in .navbar-brand', async(() => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;

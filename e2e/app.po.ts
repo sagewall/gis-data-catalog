@@ -1,11 +1,11 @@
 import { browser, by, element } from 'protractor';
 
-export class GisDataCatalogPage {
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getNavbarBrandText() {
-    return element(by.css('a.navbar-brand')).getText();
+    return element(by.css('.navbar-brand')).getText();
   }
 }
