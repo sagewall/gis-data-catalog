@@ -3,12 +3,12 @@ import { AppComponent } from './app.component';
 
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { CatalogModule } from './catalog/catalog.module';
 import { HelpComponent } from './help/help.component';
-import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 describe('AppComponent', () => {
@@ -22,7 +22,7 @@ describe('AppComponent', () => {
       imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+        HttpClientModule,
         AppRoutingModule,
         CatalogModule,
         RouterTestingModule
