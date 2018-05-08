@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
+import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { DatasetService } from '../dataset.service';
 import { Dataset } from '../dataset';
-import 'rxjs/add/operator/switchMap';
+import { switchMap } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-dataset-detail',
@@ -11,21 +12,23 @@ import 'rxjs/add/operator/switchMap';
 })
 export class DatasetDetailComponent implements OnInit {
 
-  dataset: Dataset;
+  dataset$: Observable<Dataset>;
 
   constructor(
     private route: ActivatedRoute,
+    private router: Router,
     private datasetService: DatasetService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
-    this.route.params
-      .switchMap((params: Params) => this.datasetService.getDataset(params['id']))
-      .subscribe(dataset => this.dataset = dataset);
+    this.dataset$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => this.datasetService.getDataset(params.get('id')))
+    );
   }
 
   download() {
-    window.open(this.dataset.downloadUrl);
+    this.dataset$.subscribe(dataset => window.open(dataset.downloadUrl));
   }
 
 }

@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Dataset } from './dataset';
-import { Observable } from 'rxjs/observable';
+import { Observable } from 'rxjs';
 import { environment } from '../environments/environment';
-import 'rxjs/add/operator/map';
 
 @Injectable()
 export class DatasetService {
 
-  constructor( protected httpClient: HttpClient ) { }
+  constructor(protected httpClient: HttpClient) {
+  }
 
   getDatasets(): Observable<Dataset[]> {
     return this.httpClient.get<Dataset[]>(`${environment.apiUrl}/datasets`);

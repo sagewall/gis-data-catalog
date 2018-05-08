@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: 'help', component: HelpComponent},
   {path: 'catalog', component: CatalogComponent},
   {path: 'catalog/datasets/:id', component: DatasetDetailComponent},
-  { path: '**', component: PageNotFoundComponent }
+  {path: '**', component: PageNotFoundComponent}
 ];
 
 @NgModule({

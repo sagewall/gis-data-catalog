@@ -1,4 +1,4 @@
-<div class="card" *ngIf="dataset">
+<div class="card" *ngIf="(dataset$ | async) as dataset">
   <div class="card-block">
     <h4 class="card-title">{{dataset.name}}</h4>
     <p class="card-text">{{dataset.about}}</p>

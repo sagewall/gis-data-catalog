@@ -1,23 +1,8 @@
 <div class="container">
-  <!--<nav class="navbar navbar-toggleable-md navbar-light bg-faded">-->
-    <!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"-->
-            <!--data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"-->
-            <!--aria-label="Toggle navigation">-->
-      <!--<span class="navbar-toggler-icon"></span>-->
-    <!--</button>-->
-    <!--<a class="navbar-brand" [routerLink]="['/catalog']">{{title}}</a>-->
-    <!--<div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-      <!--<div class="mr-auto"></div>-->
-      <!--<ul class="navbar-nav">-->
-        <!--<li class="nav-item">-->
-          <!--<a class="nav-link" [routerLink]="['/help']">Help</a>-->
-        <!--</li>-->
-      <!--</ul>-->
-    <!--</div>-->
-  <!--</nav>-->
   <nav class="navbar navbar-expand-lg navbar navbar-dark bg-primary">
     <a class="navbar-brand" [routerLink]="['/catalog']">{{title}}</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDiv" aria-controls="navbarTogglerDiv" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDiv"
+            aria-controls="navbarTogglerDiv" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
@@ -32,7 +17,5 @@
       </ul>
     </div>
   </nav>
-
-
   <router-outlet></router-outlet>
 </div>

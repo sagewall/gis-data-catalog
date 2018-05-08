@@ -20,7 +20,8 @@ export class CatalogComponent implements OnInit {
     private datasetService: DatasetService,
     private datasetSearchService: DatasetSearchService,
     private tagService: TagService
-  ) { }
+  ) {
+  }
 
   ngOnInit() {
     this.datasetService

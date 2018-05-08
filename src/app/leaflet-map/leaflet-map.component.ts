@@ -12,7 +12,8 @@ export class LeafletMapComponent implements OnInit {
 
   @Input() dataset: Dataset;
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
     const leafletMap = L.map('leaflet-map')
